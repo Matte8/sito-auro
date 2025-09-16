@@ -1,0 +1,356 @@
+/* Stile generale */
+body {
+    background-color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header e Navbar */
+header {
+    background-color: #ff1493;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover,
+nav a.attivo {
+    color: #00bfff;
+    font-weight: bold;
+}
+
+/* Sezione Home */
+#home {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#home h1 {
+    font-size: 3em;
+    color: #4b0082;
+}
+
+#home p {
+    font-size: 1.2em;
+}
+
+#home img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Sezione Chi Sono */
+#chi-sono {
+    padding: 40px 20px;
+    background-color: #fff5f8;
+}
+
+.chi-sono-contenuto {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 0 1rem;
+}
+
+.chi-sono-immagini {
+    flex: 1 1 300px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* immagini in griglia: 2 per riga, rapporto costante */
+.chi-sono-immagini img {
+    width: 48%;
+    aspect-ratio: 3 / 4;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+}
+
+.chi-sono-testo {
+    flex: 1 1 300px;
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* Sezione Progetti */
+#progetti {
+    background-color: #e0ffe0;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#progetti h2 {
+    font-size: 2.5em;
+    color: #4b0082;
+}
+
+.galleria-progetti {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.progetto {
+    width: 45%;
+    margin: 15px 0;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(20px);
+    opacity: 1;
+}
+
+/* Immagini nelle card progetto */
+.progetto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    display: block;
+}
+
+.progetto h3 {
+    font-size: 1.8em;
+    color: #ff1493;
+}
+
+.progetto p {
+    font-size: 1.2em;
+}
+
+/* Portfolio */
+#portfolio {
+    padding: 40px 20px;
+    background-color: #fff5f8;
+    text-align: center;
+}
+
+#portfolio h2 {
+    font-size: 2.5em;
+    color: #4b0082;
+    margin-bottom: 20px;
+}
+
+/* wrapper dei progetti del portfolio */
+.galleria {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ogni progetto del portfolio mantiene la card */
+.galleria .progetto {
+    width: 45%;
+    min-width: 320px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Carosello */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    --slide-ratio: 3 / 4;
+    --slide-height: clamp(260px, 60vw, 560px);
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+/* UNA immagine per volta */
+.carousel-images img {
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: var(--slide-height);
+    aspect-ratio: var(--slide-ratio);
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    display: block;
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 20, 147, 0.8);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.carousel .prev { left: 10px; }
+.carousel .next { right: 10px; }
+
+.carousel button:hover {
+    background-color: rgba(0, 191, 255, 0.8);
+}
+
+/* Contatti */
+#contatti {
+    text-align: center;
+}
+
+#contatti h2 {
+    color: #4b0082;
+}
+#contatti form {
+    display: inline-block;
+    text-align: left;
+    max-width: 570px;
+    width: 100%;
+}
+
+#contatti label {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    display: block;
+}
+
+#contatti input, 
+#contatti textarea {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 15px;
+    border: 2px solid #4b0082;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#contatti textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+#contatti .privacy-consent {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#contatti .privacy-consent input[type="checkbox"] {
+    width: auto; /* non allargare come gli altri input */
+    margin: 0;
+}
+
+#contatti button {
+    padding: 10px 20px;
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+#contatti button:hover {
+    background-color: #00bfff;
+}
+
+/* Social */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: #ff1493;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    color: #00bfff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #4b0082;
+    color: white;
+    padding: 20px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .chi-sono-contenuto,
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .chi-sono-testo { text-align: left; }
+    .chi-sono-immagini { max-width: 100%; }
+    .galleria-progetti .progetto { width: 100%; }
+    .carousel { flex-direction: column; }
+}
+
+@media (max-width: 600px) {
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel img { width: 100%; }
+    .contact-section { padding: 10px; }
+}
+
+/* Regola globale per immagini (coerente con le slide) */
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}

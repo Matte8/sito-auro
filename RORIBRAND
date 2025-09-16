@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sito web per mostrare i miei tratti artistici, progetti universitari, capsule collection e abiti realizzati in laboratorio.">
+    <title>Il mio portfolio artistico</title>
+
+    <style>
+        /* Stile generale */
+        body {
+            background-color: white; /* Sfondo bianco */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Header e Navbar */
+        header {
+            background-color: #ff1493; /* Magenta */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        nav ul li a:hover {
+            color: #00bfff; /* Azzurro */
+        }
+
+        /* Home Section */
+        #home {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: white;
+        }
+
+        #home h1 {
+            font-size: 3em;
+            color: #4b0082; /* Viola scuro */
+        }
+
+        #home p {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        #home img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Progetti Passati */
+        #progetti {
+            background-color: #e0ffe0; /* Verde chiaro */
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        #progetti h2 {
+            font-size: 2.5em;
+            color: #4b0082; /* Viola scuro */
+        }
+
+        .galleria-progetti {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .progetto {
+            width: 30%;
+            margin: 15px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .progetto img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Portfolio */
+        #portfolio {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        #portfolio h2 {
+            font-size: 2.5em;
+            color: #ff1493; /* Magenta */
+        }
+
+        .galleria img {
+            width: 30%;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .galleria img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Contatti */
+        #contatti {
+            padding: 40px 20px;
+            background-color: #e0ffe0; /* Verde chiaro */
+            text-align: center;
+        }
+
+        #contatti h2 {
+            font-size: 2.5em;
+            color: #4b0082; /* Viola scuro */
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        form label {
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+
+        form input, form textarea {
+            width: 300px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #4b0082;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background-color: #ff1493; /* Magenta */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #00bfff; /* Azzurro */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #4b0082; /* Viola scuro */
+            color: white;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#progetti">Progetti Passati</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Benvenuto nel mio portfolio</h1>
+        <p>Scopri il mio percorso artistico e i miei progetti realizzati durante gli studi universitari.</p>
+        <img src="immagine_intro.jpg" alt="Immagine artistica di apertura" />
+    </section>
+
+    <!-- Progetti Passati -->
+    <section id="progetti">
+        <h2>I miei progetti universitari</h2>
+        <p>Qui troverai le capsule collection e gli abiti che ho creato durante il mio percorso accademico.</p>
+        <div class="galleria-progetti">
+            <div class="progetto">
+                <h3>Capsule Collection 1</h3>
+                <img src="capsule1.jpg" alt="Capsule Collection 1">
+                <p>Descrizione del progetto.</p>
+            </div>
+            <div class="progetto">
+                <h3>Abito da laboratorio 1</h3>
+                <img src="abito1.jpg" alt="Abito da laboratorio 1">
+                <p>Descrizione del progetto.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio">
+        <h2>Il mio portfolio</h2>
+        <p>Una selezione delle mie opere più recenti.</p>
+        <div class="galleria">
+            <img src="progetto1.jpg" alt="Progetto 1">
+            <img src="progetto2.jpg" alt="Progetto 2">
+            <img src="progetto3.jpg" alt="Progetto 3">
+        </div>
+    </section>
+
+    <!-- Contatti -->
+    <section id="contatti">
+        <h2>Contattami</h2>
+        <p>Se desideri entrare in contatto, scrivimi!</p>
+        <form action="#" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="messaggio">Messaggio:</label>
+            <textarea id="messaggio" name="messaggio" required></textarea>
+            <button type="submit">Invia</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Il tuo nome. Tutti i diritti riservati.</p>
+    </footer>
+
+</body>
+</html>
+
